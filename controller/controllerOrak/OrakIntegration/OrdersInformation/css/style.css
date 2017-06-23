@@ -1,0 +1,10 @@
+.settings_nav {
+	position: fixed;
+	right: 0;
+	top: 0px;
+}
+.pause_nav {
+	position: fixed;
+	left: 0;
+	top: 0px;
+}

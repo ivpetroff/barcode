@@ -9,8 +9,8 @@ include  __DIR__.'/controller/controllerCreateFilePrint/controllerCreateFilePrin
 
         $select = '*'; 
 
-        $getLabelDesigns  = new CreateFilePrint('*');
-        $getLabelDesigns->getLabelDesign($select); 
+//        $getLabelDesigns  = new CreateFilePrint('*');
+//        $getLabelDesigns->getLabelDesign($select); 
         
         
 

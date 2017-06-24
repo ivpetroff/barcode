@@ -24,7 +24,7 @@
                 </div>
             </div>
             <hr>
-            <?php if(!empty($barcode_view)): ?>
+            <?php //if(!empty($barcode_view)): ?>
             <table class="table">
                 <thead>
                     <tr>
@@ -37,30 +37,74 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($barcode_view as $barcode): ?>
+                    <?php //foreach ($barcode_view as $barcode): ?>
+<!--                        <tr>
+                            <td><?php //echo $barcode['price_barcode'] ?></td>
+                            <td><?php //echo $barcode['barcode_bg'] ?></td>
+                            <td><?php //echo $barcode['bprice_bg'] ?></td>
+                            <td><?php //echo $barcode['barcode_ro'] ?></td>
+                            <td><?php //echo $barcode['bprice_ro'] ?></td>
+                            <td><?php //echo $barcode['date'] ?></td>
+                        </tr>        -->
                         <tr>
-                            <td><?php echo $barcode['price_barcode'] ?></td>
-                            <td><?php echo $barcode['barcode_bg'] ?></td>
-                            <td><?php echo $barcode['bprice_bg'] ?></td>
-                            <td><?php echo $barcode['barcode_ro'] ?></td>
-                            <td><?php echo $barcode['bprice_ro'] ?></td>
-                            <td><?php echo $barcode['date'] ?></td>
+                            <td>9877444142324</td>
+                            <td>7TZAN14900ДАМСКА РОКЛЯ</td>
+                            <td>92.00ЛВ</td>
+                            <td>7TZAN14900ДАМСКА РОКЛЯ</td>
+                            <td>216.17lei</td>
+                            <td>02-12-2017</td>
                         </tr>        
-                    <?php endforeach; ?>
+                        <tr>
+                            <td>9877444142324</td>
+                            <td>7TZAN14900ДАМСКА РОКЛЯ</td>
+                            <td>92.00ЛВ</td>
+                            <td>7TZAN14900ДАМСКА РОКЛЯ</td>
+                            <td>216.17lei</td>
+                            <td>02-12-2017</td>
+                        </tr>        
+                        <tr>
+                            <td>9877444142324</td>
+                            <td>7TZAN14900ДАМСКА РОКЛЯ</td>
+                            <td>92.00ЛВ</td>
+                            <td>7TZAN14900ДАМСКА РОКЛЯ</td>
+                            <td>216.17lei</td>
+                            <td>02-12-2017</td>
+                        </tr>        
+                        <tr>
+                            <td>9877444142324</td>
+                            <td>7TZAN14900ДАМСКА РОКЛЯ</td>
+                            <td>92.00ЛВ</td>
+                            <td>7TZAN14900ДАМСКА РОКЛЯ</td>
+                            <td>216.17lei</td>
+                            <td>02-12-2017</td>
+                        </tr>        
+                        <tr>
+                            <td>9877444142324</td>
+                            <td>7TZAN14900ДАМСКА РОКЛЯ</td>
+                            <td>92.00ЛВ</td>
+                            <td>7TZAN14900ДАМСКА РОКЛЯ</td>
+                            <td>216.17lei</td>
+                            <td>02-12-2017</td>
+                        </tr>        
+                        <tr>
+                            <td>9877444142324</td>
+                            <td>7TZAN14900ДАМСКА РОКЛЯ</td>
+                            <td>92.00ЛВ</td>
+                            <td>7TZAN14900ДАМСКА РОКЛЯ</td>
+                            <td>216.17lei</td>
+                            <td>02-12-2017</td>
+                        </tr>        
+                        <tr>
+                            <td>9877444142324</td>
+                            <td>7TZAN14900ДАМСКА РОКЛЯ</td>
+                            <td>92.00ЛВ</td>
+                            <td>7TZAN14900ДАМСКА РОКЛЯ</td>
+                            <td>216.17lei</td>
+                            <td>02-12-2017</td>
+                        </tr>        
+                    <?php //endforeach; ?>
                 </tbody>
             </table>
-            <?php else: ?>
-            <div class="mgn_big"  >
-                Няма намерени записи 
-                <div class="mgn_big sub_mgn"><?php echo $_POST['start'] . ' - ' . $_POST['end']; ?></div>
-            </div>
-            <div class="mgn_small">
-                Резултати с дата: 
-                <form action="index.php?view=export#" method="POST">
-                    <button type="submit" class="return_bnt btn-success active">  <?php echo date('Y-m-d')  ?></button>
-                </form>
-            </div>
-            <?php endif; ?>
             
             
         </div><!--content-panel -->

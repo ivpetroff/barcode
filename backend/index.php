@@ -31,8 +31,8 @@ switch ($_GET['view']){
                 $id = explode(',', $_POST["id"]);
                 $UPDATE        = array($_POST["column"]=>$_POST["editval"]);
                 $WHERE         = "id=".$id[0];
-                $UPDATE_ROW    = new AddBarcodeLang('*');
-                $UPDATE_ROW->updateBarcodeLang($UPDATE, $WHERE);           
+//              $UPDATE_ROW    = new AddBarcodeLang('*');
+//              $UPDATE_ROW->updateBarcodeLang($UPDATE, $WHERE);           
 
             }
 
@@ -44,8 +44,8 @@ switch ($_GET['view']){
                 $values        = explode("|", $column);
                 
                 $INSERT        = array('barcode_ro'=>$values[0], 'barcode_bg' => $values[1], 'sr_id'=>$values[2]);
-                $INSERT_ROW    = new AddBarcodeLang('*');
-                $INSERT_ROW->insertBarcodeLang($INSERT);           
+//                $INSERT_ROW    = new AddBarcodeLang('*');
+//                $INSERT_ROW->insertBarcodeLang($INSERT);           
 
             }
             
@@ -53,8 +53,8 @@ switch ($_GET['view']){
             if(!empty($_POST['delete']))
             {
                 $ID = "id=" . $_POST['id'];
-                $DELETE_ROW    = new AddBarcodeLang('*');
-                $DELETE_ROW->deleteBarcodeLang($ID);  
+//                $DELETE_ROW    = new AddBarcodeLang('*');
+//                $DELETE_ROW->deleteBarcodeLang($ID);  
             }
         break;
         
@@ -63,9 +63,9 @@ switch ($_GET['view']){
         
             include __DIR__ . '/controller/Labels/controllerLabels.php';
         
-            $viewLabels = new viewLabels();   
-            $getROLabels = $viewLabels->getROLabels();
-            $getBGLabels = $viewLabels->getBGLabels($ROWS, $WHERE); 
+//            $viewLabels = new viewLabels();   
+//            $getROLabels = $viewLabels->getROLabels();
+//            $getBGLabels = $viewLabels->getBGLabels($ROWS, $WHERE); 
            
             
         break;
@@ -74,7 +74,7 @@ switch ($_GET['view']){
 
             include __DIR__ . '/controller/ExportBarcode/controllerExportBarcode.php';
 
-            $EXPORT = new ExportBarcode('*');
+//            $EXPORT = new ExportBarcode('*');
             
             if ($_POST["submit"] == '1') {
                 
@@ -87,8 +87,8 @@ switch ($_GET['view']){
                 
             } else {
                 
-                $ROWS = '*';
-                $barcode_view = $EXPORT->getExportBarcode($ROWS, $WHERE, $LIMIT);
+//                $ROWS = '*';
+//                $barcode_view = $EXPORT->getExportBarcode($ROWS, $WHERE, $LIMIT);
                 
             }
             
@@ -99,43 +99,43 @@ switch ($_GET['view']){
         
             include __DIR__ . '/controller/EditBarcodeLabel/controllerEditBarcodeLabel.php';
         
-            $EditBarcodeLabel = new EditBarcodeLabel();
+//            $EditBarcodeLabel = new EditBarcodeLabel();
+//            
+//           
+//    
+//            if(!empty($_POST['column']))
+//            {
+//
+//                $id = explode(',', $_POST["id"]);
+//                $UPDATE        = array($_POST["column"]=>$_POST["editval"]);
+//                $WHERE         = "id=".$id[0];
+//                $UPDATE_ROW    = new EditBarcodeLabel('*');
+//                $UPDATE_ROW->updateBarcodeLabel($UPDATE, $WHERE);           
+//
+//            }
+//
+//            if(!empty($_POST['insert']))
+//            {
+//    
+//    
+//                $column        = $_POST['data'];
+//                $values        = explode("|", $column);
+//                
+//                $INSERT        = array('variables'=>$values[0], 'variables_view' => $values[1], 'variables_bg'=>$values[2], 'variables_ro'=>$values[3] );
+//                $INSERT_ROW    = new EditBarcodeLabel('*');
+//                $INSERT_ROW->insertBarcodeLabel($INSERT);           
+//
+//            }
             
-           
-    
-            if(!empty($_POST['column']))
-            {
-
-                $id = explode(',', $_POST["id"]);
-                $UPDATE        = array($_POST["column"]=>$_POST["editval"]);
-                $WHERE         = "id=".$id[0];
-                $UPDATE_ROW    = new EditBarcodeLabel('*');
-                $UPDATE_ROW->updateBarcodeLabel($UPDATE, $WHERE);           
-
-            }
-
-            if(!empty($_POST['insert']))
-            {
-    
-    
-                $column        = $_POST['data'];
-                $values        = explode("|", $column);
-                
-                $INSERT        = array('variables'=>$values[0], 'variables_view' => $values[1], 'variables_bg'=>$values[2], 'variables_ro'=>$values[3] );
-                $INSERT_ROW    = new EditBarcodeLabel('*');
-                $INSERT_ROW->insertBarcodeLabel($INSERT);           
-
-            }
-            
     
             
-            
-            if(!empty($_POST['delete']))
-            {
-                $ID = "id=" . $_POST['id'];
-                $DELETE_ROW    = new EditBarcodeLabel('*');
-                $DELETE_ROW->deleteBarcodeLabel($ID);  
-            }
+//            
+//            if(!empty($_POST['delete']))
+//            {
+//                $ID = "id=" . $_POST['id'];
+//                $DELETE_ROW    = new EditBarcodeLabel('*');
+//                $DELETE_ROW->deleteBarcodeLabel($ID);  
+//            }
         break;
         
     case 'import':

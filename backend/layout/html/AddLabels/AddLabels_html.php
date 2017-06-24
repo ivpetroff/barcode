@@ -139,11 +139,11 @@
                                     @all
                                     --->
 
-                                    <label class="btn btn-success btn-filter active" data-target="completed">
+                                    <label class="btn btn-success btn-filter active" data-target="clothes">
                                         <input type="radio" name="options" id="option1" autocomplete="off" checked>
                                         Дрехи
                                     </label>
-                                    <label class="btn btn-warning btn-filter" data-target="pending">
+                                    <label class="btn btn-warning btn-filter" data-target="shoes">
                                         <input type="radio" name="options" id="option2" autocomplete="off"> Обувки
                                     </label>
                                     <label class="btn btn-default btn-filter" data-target="all">
@@ -166,21 +166,97 @@
                             </tr>
                         </thead>
 
-                        <?php $barcodes = $AddBarcodeLang->getBarcodeLang('*'); ?>
+                        <?php //$barcodes = $AddBarcodeLang->getBarcodeLang('*'); ?>
 
                         <tbody>
-                            <?php foreach ($barcodes as $key => $barcode): ?>
-                                <tr id="ese" data-status="completed">
-                                    <td id="<?php echo $barcodes[$key]['id']; ?>" align="center">
+                            <?php ///foreach ($barcodes as $key => $barcode): ?>
+                                <tr id="ese" data-status="clothes">
+                                    <td id="<?php //echo $barcodes[$key]['id']; ?>" align="center">
                                         <a class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
                                         <a class="btn btn-danger trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
                                     </td>
-                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_ro', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="ro" class="editable hidden-xs"><?php echo $barcodes[$key]['barcode_ro']; ?></td>
-                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_bg', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="bg" class="editable"><?php echo $barcodes[$key]['barcode_bg']; ?></td>
-                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'sr_id', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable"><?php echo $barcodes[$key]['sr_id']; ?></td>
+<!--                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_ro', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="ro" class="editable hidden-xs"><?php //echo $barcodes[$key]['barcode_ro']; ?></td>
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_bg', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="bg" class="editable"><?php //echo $barcodes[$key]['barcode_bg']; ?></td>
+                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'sr_id', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable"><?php //echo $barcodes[$key]['sr_id']; ?></td>-->
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_ro', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="ro" class="editable hidden-xs">7TZAN14900ДАМСКА РОКЛЯ</td>
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_bg', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="bg" class="editable">7TZAN14900ДАМСКА РОКЛЯ</td>
+                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'sr_id', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable">7</td>
                                 </tr>
-                                <?php $new_id = $barcodes[$key]['id'] + 1; ?>
-                            <?php endforeach; ?>
+                                <tr id="ese" data-status="clothes">
+                                    <td id="<?php //echo $barcodes[$key]['id']; ?>" align="center">
+                                        <a class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                                        <a class="btn btn-danger trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                                    </td>
+<!--                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_ro', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="ro" class="editable hidden-xs"><?php //echo $barcodes[$key]['barcode_ro']; ?></td>
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_bg', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="bg" class="editable"><?php //echo $barcodes[$key]['barcode_bg']; ?></td>
+                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'sr_id', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable"><?php //echo $barcodes[$key]['sr_id']; ?></td>-->
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_ro', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="ro" class="editable hidden-xs">7TZAN14900ДАМСКА РОКЛЯ</td>
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_bg', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="bg" class="editable">7TZAN14900ДАМСКА РОКЛЯ</td>
+                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'sr_id', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable">7</td>
+                                </tr>
+                                <tr id="ese" data-status="shoes">
+                                    <td id="<?php //echo $barcodes[$key]['id']; ?>" align="center">
+                                        <a class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                                        <a class="btn btn-danger trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                                    </td>
+<!--                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_ro', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="ro" class="editable hidden-xs"><?php //echo $barcodes[$key]['barcode_ro']; ?></td>
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_bg', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="bg" class="editable"><?php //echo $barcodes[$key]['barcode_bg']; ?></td>
+                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'sr_id', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable"><?php //echo $barcodes[$key]['sr_id']; ?></td>-->
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_ro', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="ro" class="editable hidden-xs">7TZAN14900ОБУВКИ NIKE</td>
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_bg', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="bg" class="editable">7TZAN14900ОБУВКИ NIKE</td>
+                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'sr_id', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable">7</td>
+                                </tr>
+                                <tr id="ese" data-status="shoes">
+                                    <td id="<?php //echo $barcodes[$key]['id']; ?>" align="center">
+                                        <a class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                                        <a class="btn btn-danger trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                                    </td>
+<!--                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_ro', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="ro" class="editable hidden-xs"><?php //echo $barcodes[$key]['barcode_ro']; ?></td>
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_bg', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="bg" class="editable"><?php //echo $barcodes[$key]['barcode_bg']; ?></td>
+                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'sr_id', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable"><?php //echo $barcodes[$key]['sr_id']; ?></td>-->
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_ro', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="ro" class="editable hidden-xs">7TZAN14900ОБУВКИ NIKE</td>
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_bg', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="bg" class="editable">7TZAN14900ОБУВКИ NIKE</td>
+                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'sr_id', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable">7</td>
+                                </tr>
+                                <tr id="ese" data-status="shoes">
+                                    <td id="<?php //echo $barcodes[$key]['id']; ?>" align="center">
+                                        <a class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                                        <a class="btn btn-danger trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                                    </td>
+<!--                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_ro', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="ro" class="editable hidden-xs"><?php //echo $barcodes[$key]['barcode_ro']; ?></td>
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_bg', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="bg" class="editable"><?php //echo $barcodes[$key]['barcode_bg']; ?></td>
+                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'sr_id', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable"><?php //echo $barcodes[$key]['sr_id']; ?></td>-->
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_ro', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="ro" class="editable hidden-xs">7TZAN14900ОБУВКИ NIKE</td>
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_bg', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="bg" class="editable">7TZAN14900ОБУВКИ NIKE</td>
+                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'sr_id', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable">7</td>
+                                </tr>
+                                <tr id="ese" data-status="shoes">
+                                    <td id="<?php //echo $barcodes[$key]['id']; ?>" align="center">
+                                        <a class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                                        <a class="btn btn-danger trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                                    </td>
+<!--                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_ro', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="ro" class="editable hidden-xs"><?php //echo $barcodes[$key]['barcode_ro']; ?></td>
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_bg', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="bg" class="editable"><?php //echo $barcodes[$key]['barcode_bg']; ?></td>
+                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'sr_id', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable"><?php //echo $barcodes[$key]['sr_id']; ?></td>-->
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_ro', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="ro" class="editable hidden-xs">7TZAN14900ОБУВКИ NIKE</td>
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_bg', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="bg" class="editable">7TZAN14900ОБУВКИ NIKE</td>
+                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'sr_id', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable">7</td>
+                                </tr>
+                                <tr id="ese" data-status="clothes">
+                                    <td id="<?php //echo $barcodes[$key]['id']; ?>" align="center">
+                                        <a class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                                        <a class="btn btn-danger trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                                    </td>
+<!--                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_ro', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="ro" class="editable hidden-xs"><?php //echo $barcodes[$key]['barcode_ro']; ?></td>
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_bg', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="bg" class="editable"><?php //echo $barcodes[$key]['barcode_bg']; ?></td>
+                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'sr_id', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable"><?php //echo $barcodes[$key]['sr_id']; ?></td>-->
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_ro', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="ro" class="editable hidden-xs">7TZAN14900ДАМСКА РОКЛЯ</td>
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'barcode_bg', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="bg" class="editable">7TZAN14900ДАМСКА РОКЛЯ</td>
+                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'sr_id', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable">7</td>
+                                </tr>
+                                
+                                <?php //$new_id = $barcodes[$key]['id'] + 1; ?>
+                            <?php// endforeach; ?>
                         </tbody>
                     </table>
                 </div>

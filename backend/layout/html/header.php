@@ -66,16 +66,7 @@
                                 <li><a  href="?view=editlabels&lang=bg">България</a></li> 
                             </ul>-->
                         </li>
-                        <li class="sub-menu">
-                            <a href="?view=printlabels&lang=bg" >
-                                <i class="fa fa-th"></i>
-                                <span>Принтирай</span>
-                            </a>
-<!--                            <ul class="sub">
-                                <li><a  href="?view=printlabels&lang=bg">Етикети (RO)</a></li>
-                                <li><a  href="?view=printlabels&lang=bg">Етикети (BG)</a></li>
-                            </ul>-->
-                        </li>
+                         
                         <li class="sub-menu">
                             <a href="?view=export" >
                                 <i class="fa fa-tasks"></i>

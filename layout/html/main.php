@@ -21,7 +21,7 @@
     </thead>
     <form action="index.php" method="POST"  class="formPrint" >
         <tbody class="table-hover"> 
-            <?php for($i = 0; $i < 10;$i++): ?>
+            <?php for ($i = 0; $i < 10; $i++): ?>
                 <tr>
                     <td ><input    maxlength="13" dataRow="<?php echo $i ?>" id="Barcode_<?php echo $i; ?>" class="form_in_search form-control focused BarcodeInput" type="text" name="barcode_price[]" /> </td>
                     <td ><input    maxlength="13" dataRow="<?php echo $i ?>" id="Name_<?php echo $i; ?>" class="form_in_search form-control NameInput" type="text" name="barcode_ro[]" /></td>
@@ -43,45 +43,56 @@
             РАЗПЕЧАТАЙ 
         </button>
     </div>
+    <br/>
+    <br/>
+    <br/>
+    <div class="col-lg-5 align-self-center send_print">
+        <form action="<?php echo $_SERVER["REQUEST_URI"] ?>backend" method="POST">
+            <button style="background: #5d5c5c;" type="submit" class="btn btn-primary-print sendPrint" data-toggle="button" aria-pressed="false" autocomplete="off">
+                АДМИН ПАНЕЛ 
+            </button>
+        </form>
+    </div>
+
 </div> 
 
- 
+
 <script type="text/javascript">
-     
-     
-     
-    $('.form_in_search').bind('keydown', function(e) {
+
+
+
+    $('.form_in_search').bind('keydown', function (e) {
         if (e.keyCode == 13) {
             e.preventDefault();
         }
     });
-     var inputFocus = $('.focused')[0];
-         $(inputFocus).focus();
-    
-    
+    var inputFocus = $('.focused')[0];
+    $(inputFocus).focus();
+
+
     $(".form_in_search").keyup(function () {
-       
-          var $next = $(this).next('.form_in_search'); 
-             
-          if (this.value.length){
-                
-              if(this.value.length == 13)
-              {
-                
-                    var nextRow;
-                    nextRow = $(this).closest('tr').next('tr');
-                    $(nextRow).find('.BarcodeInput').focus()
-                    var setFocus = $('.focused');
-                    var getVal = $(setFocus).val();
-                    
-              }
-              
-          }else{ 
+
+        var $next = $(this).next('.form_in_search');
+
+        if (this.value.length) {
+
+            if (this.value.length == 13)
+            {
+
+                var nextRow;
+                nextRow = $(this).closest('tr').next('tr');
+                $(nextRow).find('.BarcodeInput').focus()
+                var setFocus = $('.focused');
+                var getVal = $(setFocus).val();
+
+            }
+
+        } else {
 //              $(this).blur(); 
-          }
+        }
     });
-    
-   
+
+
 </script>
 
 
@@ -93,25 +104,25 @@
 <script>
 
     // Send Barcode for Print
-    $(document).on('click', 'button.sendPrint', function(){
+    $(document).on('click', 'button.sendPrint', function () {
         $('.formPrint').submit();
     })
 
 
 //Try to get tbody first with jquery children. works faster!
-var tbody = $('.table-fill').children('tbody');
- 
+    var tbody = $('.table-fill').children('tbody');
+
 //Then if no tbody just select your table 
-var table = tbody.length ? tbody : $('.table-fill');
+    var table = tbody.length ? tbody : $('.table-fill');
 
 
-$('#add-new-row').click(function(){
-    //Add row
-    table.append('<tr><td ><input    maxlength="13"  class="form_in_search form-control focused BarcodeInput" type="text" name="barcode_price[]"/></td>\n\
+    $('#add-new-row').click(function () {
+        //Add row
+        table.append('<tr><td ><input    maxlength="13"  class="form_in_search form-control focused BarcodeInput" type="text" name="barcode_price[]"/></td>\n\
                       <td ><input    maxlength="13"  class="form_in_search form-control NameInput" type="text" name="barcode_ro[]" /></td>\n\
                       <td><input    maxlength="13"  class="form_in_search form-control PriceInput" type="text" name="price_lei[]" /></td>\n\
                 </tr>');
-})
+    })
 
 
 
@@ -124,4 +135,3 @@ $('#add-new-row').click(function(){
 
 
 
-  

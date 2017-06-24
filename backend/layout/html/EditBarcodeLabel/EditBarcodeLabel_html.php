@@ -155,28 +155,68 @@
                             </tr>
                         </thead>
 
-                        <?php  $barcodes = $EditBarcodeLabel->getBarcodeLabel('*'); ?>
+                        <?php  //$barcodes = $EditBarcodeLabel->getBarcodeLabel('*'); ?>
 
                         <tbody>
-                            <?php foreach ($barcodes as $key => $barcode): ?>
+                            <?php //foreach ($barcodes as $key => $barcode): ?>
                                 <tr id="ese" data-status="completed">
                                     <td id="<?php echo $barcodes[$key]['id']; ?>" align="center">
                                         <a class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
                                         <a class="btn btn-danger trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
                                     </td>
-                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'variables', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="ro" class="editable hidden-xs"><?php echo $barcodes[$key]['variables']; ?></td>
-                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'variables_view', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="bg" class="editable"><?php echo $barcodes[$key]['variables_view']; ?></td>
-                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'variables_ro', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable"><?php echo $barcodes[$key]['variables_ro']; ?></td>
-                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'variables_bg', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable"><?php echo $barcodes[$key]['variables_bg']; ?></td>
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'variables', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="ro" class="editable hidden-xs">{RO,BG}</td>
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'variables_view', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="bg" class="editable">7TZAN14900ДАМСКА РОКЛЯ</td>
+                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'variables_ro', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable">7TZAN14900ДАМСКА РОКЛЯ</td>
+                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'variables_bg', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable">7TZAN14900ДАМСКА РОКЛЯ</td>
                                 </tr>
-                                <?php $new_id = $barcodes[$key]['id'] + 1; ?>
-                            <?php endforeach; ?>
+                                <tr id="ese" data-status="completed">
+                                    <td id="<?php echo $barcodes[$key]['id']; ?>" align="center">
+                                        <a class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                                        <a class="btn btn-danger trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                                    </td>
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'variables', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="ro" class="editable hidden-xs">{CURRENCY}</td>
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'variables_view', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="bg" class="editable">32.00lei</td>
+                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'variables_ro', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable">YES</td>
+                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'variables_bg', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable">NO</td>
+                                </tr>
+                                <tr id="ese" data-status="completed">
+                                    <td id="<?php echo $barcodes[$key]['id']; ?>" align="center">
+                                        <a class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                                        <a class="btn btn-danger trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                                    </td>
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'variables', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="ro" class="editable hidden-xs">{INFO}</td>
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'variables_view', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="bg" class="editable">INFO</td>
+                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'variables_ro', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable">YES</td>
+                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'variables_bg', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable">NO</td>
+                                </tr>
+                                <tr id="ese" data-status="completed">
+                                    <td id="<?php echo $barcodes[$key]['id']; ?>" align="center">
+                                        <a class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                                        <a class="btn btn-danger trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                                    </td>
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'variables', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="ro" class="editable hidden-xs">{DATA}</td>
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'variables_view', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="bg" class="editable">12-12-2017</td>
+                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'variables_ro', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable">DD-MM-YYYY</td>
+                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'variables_bg', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable">DD-MM-YYYY</td>
+                                </tr>
+                                <tr id="ese" data-status="completed">
+                                    <td id="<?php echo $barcodes[$key]['id']; ?>" align="center">
+                                        <a class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                                        <a class="btn btn-danger trash"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                                    </td>
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'variables', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="ro" class="editable hidden-xs">{TIME}</td>
+                                    <td contenteditable="false" onBlur="saveToDatabase(this, 'variables_view', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="bg" class="editable">24:00</td>
+                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'variables_ro', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable">HH:MM</td>
+                                    <td contenteditable="false"  onBlur="saveToDatabase(this, 'variables_bg', '<?php echo $barcodes[$key]["id"]; ?>, 1')"   id="sr" class="editable">HH:MM</td>
+                                </tr>
+                                <?php //$new_id = $barcodes[$key]['id'] + 1; ?>
+                            <?php //endforeach; ?>
                         </tbody>
                     </table>
                 </div>
                 <div class="panel-footer">
                     <div class="row">
-                        <?php echo $Pages->displayPaginationBelow(); ?>
+                        <?php //echo $Pages->displayPaginationBelow(); ?>
                         <div class="col col-xs-offset-3 col-xs-6">
                             <nav aria-label="Page navigation" class="text-center">
                                 <ul class="pagination">
